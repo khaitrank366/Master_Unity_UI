@@ -1,0 +1,42 @@
+Shift + Kéo 	=> giữ nguyên resolution
+Alt + shift + A => SetActive GameObject
+H 		=> giấu gameobject hiện tại
+Shift + H	=> giấu hết tất cả trừ gameoject hiện tại
+
+Vertical Layout Group
+. Spacing : khoảng cách giữa các children ( theo chiều dọc )
+. Padding : căn từ parent vào con
+. Control Child Size : căn chỉnh chiều dài / rộng của con theo khoảng trống của parent
+
+Horizontal Layout Group
+. Child Force Expand: chia đều khoảng cách của parent cho các con
+=> nên tắt Width để dễ căn chỉnh chiều ngang ( Các gameobject sẽ sát lại gần nhau )
+=> chỉnh spacing ( theo chiều ngang )
+
+ImageType
+	Simple (Đơn giản): Preserve Aspect
+ 		. Mặc định, hiển thị hình ảnh nguyên vẹn, không thay đổi gì.
+		. Khi thay đổi kích thước, ảnh có thể bị kéo dãn hoặc nén méo.
+		. Dùng khi không cần co dãn đặc biệt (ví dụ: icon, nút nhỏ).
+		Ví dụ: Một nút bấm có icon đơn giản.
+
+	Sliced (Cắt góc): Border trong Sprite Editor
+		. Dùng cho hình ảnh có 9 phần (cắt theo "9-Slice Scaling").
+		. 4 góc giữ nguyên, cạnh kéo dãn nhưng không méo.
+		. Cần bật Sprite Mode = 9-Slice trong Texture Import Settings.
+		. Dùng cho UI như khung, hộp thoại, button.
+		Ví dụ: Khung viền UI, hộp chat, nút có bo góc.
+
+	Tiled (Lặp lại): Pixel Per Unit Multiplier
+		. Giống Sliced, nhưng phần giữa không kéo dãn mà lặp lại.
+		. Dùng khi muốn vân nền hoặc khung có họa tiết không méo.
+		. Ví dụ:  thanh năng lượng có hoa văn lặp lại.
+
+	Filled (Đổ đầy): Fill Amount, Fill Method, Origin
+		. Hình ảnh sẽ đổ đầy theo một hướng nhất định (Radial, Horizontal, Vertical...).
+		. Có thể dùng Fill Amount để thay đổi lượng hình hiển thị.
+		. Dùng cho progress bar, thanh máu, đồng hồ hẹn giờ.
+		Ví dụ: Thanh máu giảm dần, đồng hồ quay tròn, hiệu ứng nạp năng lượng.
+
+
+Anchor, position, worldspace, layering, overlay mode, render queue
