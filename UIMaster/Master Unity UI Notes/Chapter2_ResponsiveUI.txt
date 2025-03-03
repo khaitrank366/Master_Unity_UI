@@ -6,12 +6,34 @@ Shift + H	=> giấu hết tất cả trừ gameoject hiện tại
 Vertical Layout Group
 . Spacing : khoảng cách giữa các children ( theo chiều dọc )
 . Padding : căn từ parent vào con
-. Control Child Size : căn chỉnh chiều dài / rộng của con theo khoảng trống của parent
+. Control Child Size : 
+	. Căn chỉnh chiều dài / rộng của con theo khoảng trống của parent
+	. child sẽ không chỉnh được height and width
+	. nếu tắt child sẽ được chỉnh theo preferred height / width
 
 Horizontal Layout Group
 . Child Force Expand: chia đều khoảng cách của parent cho các con
 => nên tắt Width để dễ căn chỉnh chiều ngang ( Các gameobject sẽ sát lại gần nhau )
 => chỉnh spacing ( theo chiều ngang )
+
+Canvas
+. Canvas Scaler
+	- UI Scale Mode => Scale With Screen Size ( nên setup đầu tiên rồi mới chỉnh UI )
+		. Nên để ref là 1280 x 720 ( small HD )cho game pc và ngược lại cho game mobile
+	- Screen Watch Mode => Match Width Or Height
+		. Nếu đặt Match = 0, UI sẽ co giãn theo chiều rộng. ( dùng cho game vertical - game mobile )
+			=> chiều cao không bị ảnh hưởng tăng height
+			=> chiều rộng sẽ thay đổi aspect khi tăng giảm width
+		. Nếu đặt Match = 1, UI sẽ co giãn theo chiều cao ( dùng cho game horizontal - game pc )
+			=> chiểu rộng sẽ không bị ảnh hưởng khi tăng giảm width
+			=> chiều cao sẽ bị thay đổi aspect khi tăng giảm height
+
+Layout Element
+	- Min Height: bỏ qua layout, chỉnh min preferred heigh cho UI đó
+	- TRICK: lấy empty game object gắn layout vào để căn chỉnh spacing
+
+Grid Layout Group
+	- phải chỉnh size child qua cellsize
 
 ImageType
 	Simple (Đơn giản): Preserve Aspect
