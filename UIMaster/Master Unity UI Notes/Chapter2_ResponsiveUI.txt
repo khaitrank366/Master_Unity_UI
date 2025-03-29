@@ -6,10 +6,12 @@ Shift + H	=> giấu hết tất cả trừ gameoject hiện tại
 Vertical Layout Group
 . Spacing : khoảng cách giữa các children ( theo chiều dọc )
 . Padding : căn từ parent vào con
+
 . Control Child Size : 
 	. Căn chỉnh chiều dài / rộng của con theo khoảng trống của parent
 	. child sẽ không chỉnh được height and width
 	. nếu tắt child sẽ được chỉnh theo preferred height / width
+
 
 Horizontal Layout Group
 . Child Force Expand: chia đều khoảng cách của parent cho các con

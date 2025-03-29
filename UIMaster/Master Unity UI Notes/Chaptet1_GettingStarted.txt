@@ -1,0 +1,7 @@
+Canvas, Image, Text, Button, Panel,
+2D,3D Asset 	=> Order in Layer
+UI 		=> Hierachy Order
+720p = 1280 x 720
+
+Shift + Kéo 	=> giữ nguyên resolution
+Alt + shift + A => SetActive GameObject
